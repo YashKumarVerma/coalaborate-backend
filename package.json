@@ -5,6 +5,12 @@
   "repository": "https://github.com/YashKumarVerma/coalaborate-backend",
   "author": "Yash Kumar Verma <yk.verma2000@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src/**/*.ts --fix",
+    "build": "tsc",
+    "start:dev": "nodemon",
+    "start:prod": "node ./dist/src/server.js"
+  },
   "dependencies": {
     "@astrajs/rest": "^0.0.12",
     "accesscontrol": "^2.2.1",
