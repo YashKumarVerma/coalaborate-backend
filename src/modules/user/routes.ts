@@ -39,15 +39,14 @@ router.get('/:email', async (req: Request, res: Response) => {
 
 /** to create a new user */
 router.post('/', async (req: Request, res: Response) => {
-  if (!check.can(resolveRole(req)).createOwn('profile').granted) {
-    throw new ForbiddenException('Not allowed to create a new profile')
-  }
+  //   if (!check.can(resolveRole(req)).createOwn('profile').granted) {
+  //     throw new ForbiddenException('Not allowed to create a new profile')
+  //   }
 
   const userDetails: CreateUserInterface = req.body.payload
   const data = await UserController.createUser(userDetails)
   logger.info(`user.created.${userDetails.email}`)
   res.json(SuccessToResponseMapper(data))
 })
-
 
 export default router

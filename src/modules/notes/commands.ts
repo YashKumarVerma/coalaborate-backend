@@ -11,7 +11,7 @@ export const NOTES_CQL = {
   /** to get all data for said URL */
   SEARCH: {
     BY: {
-      URL: `SELECT * FROM ${namespace}.note WHERE url = ?`,
+      URL: `SELECT * FROM ${namespace}.note WHERE url = ? ALLOW FILTERING`,
     },
   },
 

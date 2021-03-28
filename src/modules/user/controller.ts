@@ -25,7 +25,7 @@ class UserController {
     // if (userData !== null) {
     //   throw new BadRequestException('User already exist')
     // }
-
+    console.log(user)
     const newUser = await UserService.create(user)
     return newUser
   }

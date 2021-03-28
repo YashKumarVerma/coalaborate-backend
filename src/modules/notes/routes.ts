@@ -27,10 +27,11 @@ router.post('/:subject/:type', async (req: Request, res: Response) => {
 })
 
 /** to create a new user */
-router.get('/url', async (req: Request, res: Response) => {
+router.post('/url', async (req: Request, res: Response) => {
   const { url } = req.body.payload
+  console.log(req.body)
   const data = await NoteController.getAllByUrl(url)
-  logger.info(`note.find.all.${url.email}`)
+  logger.info(`note.find.all.${url}`)
   res.json(SuccessToResponseMapper(data))
 })
 

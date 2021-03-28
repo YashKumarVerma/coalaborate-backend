@@ -4,6 +4,9 @@ export interface UserInterface {
   email: string
   password: string
   role: string
+
+  // cannot monkey patch everything now
+  firstname?: string
 }
 
 export interface CreateUserInterface {

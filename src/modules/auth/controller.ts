@@ -15,7 +15,7 @@ class AuthController {
     const payload: LoginTokenData = {
       email: userDetails.email,
       role: userDetails.role,
-      name: userDetails.firstName,
+      name: userDetails.firstname || 'user',
     }
 
     const token = await sign(payload, config.get('login_token.secret'), {
